@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.mini-mode {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-mode::after {
+    content: "DP";
+    font-size: 2em;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+li.priority {
+    background: rgba(255, 0, 0, 0.6);
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
